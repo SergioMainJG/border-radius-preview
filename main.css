@@ -1,0 +1,122 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.circle-container {
+  display: grid;
+  grid-template-areas:
+    "top-left top top-right"
+    "left circle right"
+    "bottom-left bottom bottom-right";
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+  place-items: center;
+}
+
+.border-radius-values {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#border-top-left {
+  grid-area: top-left;
+}
+
+#border-top-right {
+  grid-area: top-right;
+}
+
+#border-bottom-left {
+  grid-area: bottom-left;
+}
+
+#border-bottom-right {
+  grid-area: bottom-right;
+}
+.circle {
+  background-color: rgba(167, 66, 185, 0.898);
+  width: 20vw;
+  /* height: 23vh; */
+  aspect-ratio: 1/1;
+  margin: 5rem auto;
+  border-radius: 100%;
+  /* border-radius: 10rem 20rem 30rem 40rem; */
+  grid-area: circle;
+}
+article {
+  background-color: rgba(23, 27, 55, 0.776);
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+    min-width: 1rem;
+    max-width: 7rem;
+    width: auto;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.5px;
+    color: #d3d0ff;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.inputs-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 80%;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 5rem;
+}
+
+.inputs-container > div {
+  flex: 1;
+}
+
+.ranges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.ranges label {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+input {
+  margin: 2rem;
+  width: auto;
+}
